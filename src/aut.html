@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="aut.css">
+    <title>Autenticación</title>
+</head>
+<body>
+    <div class="container">
+        <!-- <nav class="sidebar">
+            <ul>
+                <li><img src="src/icons/Menu-H.svg" alt=""></li>
+                <hr>
+                <li><img src="src/icons/Home.svg" alt=""></li>
+                <li><img src="src/icons/Prestamos.svg" alt=""></li>
+                <li><img src="src/icons/Reservas.svg" alt=""></li>
+                <li><img src="src/icons/Mensajes.svg" alt=""></li>
+                <li><img src="src/icons/Fav.svg" alt=""></li>
+                <li><img src="src/icons/Red.svg" alt=""></li>
+            </ul>
+        </nav> -->
+
+        <div class="content">
+            <div class="autenticacion">
+                <div class="form-container">
+                    <img src="src/icons/EmailCheck.svg" alt="">
+                    <h2>Ingresar código de autenticación</h2>
+                    <div id="codeInputContainer">
+                        <input type="text" maxlength="1" id="digit1" class="digitInput" oninput="focusNext(this)">
+                        <input type="text" maxlength="1" id="digit2" class="digitInput" oninput="focusNext(this)">
+                        <input type="text" maxlength="1" id="digit3" class="digitInput" oninput="focusNext(this)">
+                        <input type="text" maxlength="1" id="digit4" class="digitInput" oninput="focusNext(this)">
+                        <input type="text" maxlength="1" id="digit5" class="digitInput" oninput="focusNext(this)">
+                        <input type="text" maxlength="1" id="digit6" class="digitInput" oninput="focusNext(this)">
+                    </div>
+                    <div id="codeInputContainer">
+                        <div class="linea-horizontal"></div>
+                        <div class="linea-horizontal"></div>
+                        <div class="linea-horizontal"></div>
+                        <div class="linea-horizontal"></div>
+                        <div class="linea-horizontal"></div>
+                        <div class="linea-horizontal"></div>
+                    </div>
+                    <button class="primary-button" onclick="submitCode()">Autenticarme</button>
+                    <a href="/">Reenviar código</a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="src/icons/Logo.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
