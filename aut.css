@@ -1,0 +1,153 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --azul-gris: #E6E8F4;
+    --morado: #7551DB;
+    --gris-oscuro: #5E606D;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+@font-face {
+    font-family: 'FsJoey';
+    src: url(src/FSJoey-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'FsJoey-Light';
+    src: url(src/FSJoey-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'FsJoey-MediumItalic';
+    src: url(src/FSJoey-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'FsJoey-Regular';
+    src: url(src/FSJoey-Regular.ttf) format('truetype');
+}
+
+body{
+    margin: 0;
+    font-family: 'FsJoey';
+    background-color: var(--azul-gris);
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar{
+    height: 100vh;
+    width: auto;
+    background-color: var(--white);
+    border-radius: 0 24px 24px 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul hr{
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.sidebar li {
+    padding-left: 10px;
+    padding-right: 6px;
+    text-align: center;
+}
+
+.sidebar li img{
+    width: 70px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.autenticacion {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: grid;
+    justify-items: center;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+}
+
+.form-container img{
+    width: 200px;
+}
+
+.form-container h2{
+    color: var(--morado);
+}
+
+#codeInputContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.digitInput {
+    font-family: 'FsJoey';
+    width: 30px;
+    height: 30px;
+    font-size: 40px;
+    color: var(--gris-oscuro);
+    text-align: center;
+    margin: 0 5px;
+    margin-bottom: 2px;
+    border-color: var(--morado);
+    border: none;
+}
+
+input:focus-visible{
+    outline: none;
+}
+.linea-horizontal{
+    border-top: 3px solid var(--morado);
+    width: 39px;
+    margin: 0 3px;
+    margin-bottom: 5px;
+}
+
+.primary-button {
+    font-family: 'FsJoey';
+    font-size: var(--lg);
+    background-color: var(--morado);
+    border-radius: 25px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    margin-top: 15px;
+}
+
+a{
+    color: var(--gris-oscuro);
+    font-size: var(--sm);
+    font-family: 'FsJoey-Regular';
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+}

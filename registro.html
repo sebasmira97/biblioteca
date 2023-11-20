@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="registro.css">
+    <title>Registrarme</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><img src="src/icons/Menu-H.svg" alt=""></li>
+                <hr>
+                <li><img src="src/icons/Home.svg" alt=""></li>
+                <li><img src="src/icons/Prestamos.svg" alt=""></li>
+                <li><img src="src/icons/Reservas.svg" alt=""></li>
+                <li><img src="src/icons/Mensajes.svg" alt=""></li>
+                <li><img src="src/icons/Fav.svg" alt=""></li>
+                <li><img src="src/icons/Red.svg" alt=""></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="nav-registro">
+                <button id="botonRedireccion" class="btn1">Iniciar sesión</button>
+            </div>
+            <div class="login">
+                <div class="form-container">
+                    <h1>¡Registrate en el Sistema de bibliotecas públicas de Medellín!</h1>
+                
+                    <action="/" class="form">
+                        <div class="f1">
+                            <div>
+                                <label class="label">Numero de documento de identidad:</label>
+                                <input type="text" placeholder="Ingrese el número de identifación" class="input">
+                            </div>
+                            <div>
+                                <label class="label">Tipo de identificación:</label>
+                                <select>
+                                    <option value="CC">Cedula de Ciudadania</option>
+                                    <option value="TI">Tarjeta de Identidad</option>
+                                    <option value="CE">Cedula de Extrangeria</option>
+                                </select>
+                            </div>
+                            <div>
+                            <label class="label">Nombre completo:</label>
+                            <input type="text" placeholder="Nombre y apellidos" class="input">
+                            </div>
+                        </div>
+
+                        <div class="f1">
+                            <div>
+                                <label class="label">Fecha de Nacimiento:</label>
+                                <input type="date" placeholder="DD/MM/AAAA" class="input">
+                            </div>
+                            <div>
+                                <label class="label">Sexo:</label>
+                                <select>
+                                    <option value="opcion1">Cedula de Ciudadania</option>
+                                    <option value="opcion2">Tarjeta de Identidad</option>
+                                    <option value="opcion3">Cedula de Extrangeria</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="label">Celular:</label>
+                                <input type="tel" pattern="[0-9]{10}" placeholder="3205214585" class="input">
+                            </div>
+                        </div>
+
+                        <div class="f1">
+                            <div>
+                                <label class="label">Dirección:</label>
+                                <input type="text" placeholder="Dirección de su residencia" class="input">
+                            </div>
+                            <div>
+                                <label class="label">Municipio:</label>
+                                <input type="text" placeholder="Municipio en el que reside" class="input">
+                            </div>
+                            <div>
+                                <label class="label">Barrio:</label>
+                                <input type="text" placeholder="Barrio en el que vive" class="input">
+                            </div>
+                        </div>
+
+                        <div class="f1">
+                            <div>
+                                <label class="label">Biblioteca:</label>
+                                <select>
+                                    <option value="Belen">Parque Biblioteca Belén</option>
+                                    <option value="Piloto">Biblioteca Pública Piloto</option>
+                                    <option value="Piloto-Central">Biblioteca Pública Piloto – Sede Central</option>
+                                    <option value="Guayabal">Parque Biblioteca Manuel Mejía Vallejo, Guayabal</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="label">Correo electrónico:</label>
+                                <input type="text" placeholder="Email" class="input">
+                            </div>
+                            <div>
+                                <label class="label">Contraseña:</label>
+                                <input type="password" placeholder="Contraseña" class="input">
+                            </div>
+                        </div>
+
+                        <div class="f1">
+                            <div class="contenedor">
+                                <label class="archivo" for="fileInput">FACTURA EPM</label>
+                                <input type="file" id="fileInput" name="file" accept="image/pdf">
+                            </div>
+                            <div class="contenedor">
+                                <form id="fileUploadForm">
+                                    <label class="archivo" for="fileInput">DOCUMENTO DE IDENTIDAD</label><br>
+                                    <input type="file" id="fileInput" name="file" accept="image/pdf">
+                                </form>
+                                <div id="uploadStatus"></div>
+                            </div>
+                            <div class="contenedor">
+                                <form id="fileUploadForm">
+                                    <label class="archivo" for="fileInput">CONTRATO DE ARRENDAMIENTO</label><br>
+                                    <input type="file" id="fileInput" name="file" accept="image/pdf">
+                                </form>
+                                <div id="uploadStatus"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="f2">
+                            <input type="submit" value="Registrarse" class="primary-button">
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('botonRedireccion').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
