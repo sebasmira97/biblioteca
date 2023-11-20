@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using BibliotecaApi.Models;
 
 namespace BibliotecaApi.Controllers
 {
     public class ClientesController : Controller
     {
+
+        private BibliotecaEntities1 db = new BibliotecaEntities1();
         // GET: Clientes
         public ActionResult Index()
         {
@@ -30,27 +31,23 @@ namespace BibliotecaApi.Controllers
 
         // POST: Clientes/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(
-    [Bind("EnrollmentDate,FirstMidName,LastName")] Cliente cliente)
+        public ActionResult Create(Cliente cliente)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _context.Add(student);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    db.Clientes.Add(cliente);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
                 }
+
+                return RedirectToAction("Index");
             }
-            catch (DbUpdateException /* ex */)
+            catch
             {
-                //Log the error (uncomment ex variable name and write a log.
-                ModelState.AddModelError("", "Unable to save changes. " +
-                    "Try again, and if the problem persists " +
-                    "see your system administrator.");
+                return View();
             }
-            return View(student);
         }
 
         // GET: Clientes/Edit/5

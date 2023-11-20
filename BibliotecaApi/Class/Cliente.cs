@@ -10,6 +10,6 @@ namespace BibliotecaApi.Class
     {
         public DbSet<Cliente> Clientes { get; set;}
 
-        DatabaseContext = db
+       
     }
 }
